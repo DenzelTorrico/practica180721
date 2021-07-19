@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style type="text/css" media="screen">
+		ul li{
+			list-style: none;
+			width: 150px;
+			padding: 10px;
+		}
+		ul li a{
+			text-decoration: none;
+		}
+		ul li:hover{
+		background-color: red;
+		}
+		ul li a:hover{
+			color: white;
+		}
+
+		.caja1{
+			background-color: green;
+
+		}
+		.caja2{
+			background-color: yellow;
+			cursor: pointer;
+		}
+		.caja3{
+			background-color: orange;
+			cursor: pointer;
+		}
+		.hover{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+
+		<div class="caja1">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ab sint, in exercitationem cum, laboriosam dolore maiores! Adipisci debitis, eius, deserunt ullam quo qui non consectetur assumenda quaerat, pariatur nulla aut!</p>
+		</div>
+
+		<div class="caja2">
+			<p>Omnis, alias. Officiis ratione ab laborum, aperiam reiciendis explicabo eaque provident quas itaque labore nam ex, voluptatum adipisci harum perspiciatis excepturi, nobis dolores atque impedit libero ut veritatis, corrupti blanditiis?</p>
+		</div>
+
+		<div class="caja3">
+			<p>Adipisci reiciendis repudiandae aperiam, expedita nulla provident, ab accusamus modi iste vel tempora itaque dolorem, dolores debitis inventore neque libero iure perspiciatis ipsum, at enim molestias! Rem dignissimos fugiat laboriosam.</p>
+		</div>
+
+		<button id="boton" type="">Menu</button>
+		<nav>
+			<ul>
+				
+				<li id="lista"><a href="https://es.javascript.info/" title="">JAVASCRIPT</a></li>
+				<li id="lista"><a href="https://es.javascript.info/global-object" title="">JAVASCRIPT OBJECT</a></li>
+				<li id="lista"><a href="https://api.jquery.com/slideToggle/" title="">JQUERY</a></li>
+			</ul>
+		</nav>
+
+
+		<label>Usuario<input type="text" id="texto" name="" value=""></label>
+		<label>Contraseña<input type="password" id="texto2" name="" value=""></label>
+		<input type="button" id="botones" name="" value="Aceptar">
+
+		<button id="boton1" class="btn btn-primary">cambiar texto</button>
+		<button id="boton2" class="btn btn-success">Cambiar color</button>
+		<button id="boton3" class="btn btn-danger">ANIMAR</button>
+		<h1 style="display: inline;">CAMBIAR EL TEXTO xd</h1>
+	<script type="text/javascript">
+			
+			
+			$(document).ready(function(){
+				$("#boton").click(function(){
+					$("nav").slideToggle();
+				});
+
+				$(".caja1,.caja2,.caja3").click(function(){
+					$(this).fadeOut().toggleClass("hover").fadeIn(100);
+
+				});
+
+
+				$("#botones").click(function(){
+						let x=$("#texto").val();
+						let z=$("[type='text']").val();
+						let p=$("[type='password']").val();
+						alert(`USUARIO ${z}`+`, contraseña: ${p}`);
+				});
+
+				$("#boton1").click(function(){
+					$("h1").html("HOLA MUNDO");
+				});
+
+				$("#boton2").click(function(){
+
+					$("h1").addClass("text-danger");	
+				});
+
+				$("#boton3").click(function(){
+
+						$("h1").animate({left:"250px"});
+					
+				});
+
+
+			
+			})
+
+			
+			
+
+	</script>
+	
+</div>
+</body>
+</html>

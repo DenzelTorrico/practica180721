@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+
+		<center>
+			<img id="img" src="imagen/imagen_1.jpg" width="600" height="400" alt="">
+		
+
+		</center>
+		<center>
+			<button class="btn btn-primary" onclick="llamada(this.innerHTML)">Izquierda</button>
+			<button class="btn btn-primary" onclick="llamada(this.innerHTML)">Derecha</button>
+		</center>
+		
+	<script type="text/javascript">
+			
+			var z=1;
+
+			function llamada(k){
+				if(k=="Derecha"){
+					if(z<5){
+					z++;
+					var x=document.getElementById("img").src="imagen/imagen_"+z+".jpg";
+					}
+					
+				}else if (k=="Izquierda") {
+					if(z>1){
+					z--;
+					var x=document.getElementById("img").src="imagen/imagen_"+z+".jpg";
+					}
+					
+				}
+				
+			}
+
+	</script>
+	
+</body>
+</html>
